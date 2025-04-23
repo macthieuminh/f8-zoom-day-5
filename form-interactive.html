@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet" />
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Register</title>
+    </head>
+    <body>
+        <div class="main-form">
+            <div class="form-header">
+                <h1 class="form-title">Create an account</h1>
+                <p class="form-desc">
+                    Already have an account?
+                    <a class="login-btn" href="./index.html" target="_blank">Log in</a>
+                </p>
+            </div>
+            <form class="form" action="POST" autocomplete="off">
+                <section class="form-section">
+                    <div class="from-group">
+                        <label class="form-label">
+                            Display Name
+                            <input
+                                class="form-input"
+                                spellcheck="false"
+                                type="text"
+                                value=""
+                                required
+                                placeholder="Tên hiển thị của bạn" />
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">
+                            Email
+                            <input
+                                class="form-input"
+                                spellcheck="false"
+                                type="email"
+                                value=""
+                                pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+                                required
+                                placeholder="Địa chỉ email để đăng nhập" />
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">
+                            Phone
+                            <input
+                                class="form-input"
+                                spellcheck="false"
+                                type="tel"
+                                minlength="10"
+                                pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                                required
+                                value=""
+                                placeholder="Số điện thoại xác minh tài khoản" />
+                        </label>
+                    </div>
+                </section>
+
+                <div class="form-section">
+                    <div class="form-group">
+                        <label class="form-label">
+                            Password
+                            <input
+                                class="form-input"
+                                spellcheck="false"
+                                type="password"
+                                minlength="8"
+                                maxlength="32"
+                                required
+                                value=""
+                                placeholder="Mật khẩu nên đủ mạnh" />
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">
+                            Confirm Password
+                            <input
+                                class="form-input"
+                                spellcheck="false"
+                                type="password"
+                                minlength="8"
+                                maxlength="32"
+                                required
+                                value=""
+                                placeholder="Nhập lại mật khẩu" />
+                        </label>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <div class="form-group">
+                        <label class="form-label">
+                            Date of Birth
+                            <input
+                                class="form-input"
+                                spellcheck="false"
+                                type="date"
+                                required
+                                value=""
+                                placeholder="Ngày tháng năm sinh" />
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">
+                            Address
+                            <input
+                                class="form-input"
+                                spellcheck="false"
+                                type="text"
+                                required
+                                value=""
+                                placeholder="Địa chỉ hiện tại" />
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="form-group">
+                        <label class="form-label">Change Your Picture : </label>
+                        <label class="form-label">
+                            <img
+                                class="avatar-placeholder"
+                                src="https://avatar.iran.liara.run/public"
+                                alt="" />
+                            <input
+                                id="avatar"
+                                type="file"
+                                accept="image/png, image/jpeg"
+                                hidden />
+                        </label>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <div class="form-group flex-btn-group">
+                        <div class="form-label">Gender :</div>
+                        <div class="flex-btn-item">
+                            <label class="form-label" for="radio-nam"> Nam </label>
+                            <input
+                                class="radio-btn"
+                                type="radio"
+                                name="gender"
+                                id="radio-nam"
+                                value="Nam"
+                                checked />
+                        </div>
+                        <div class="flex-btn-item">
+                            <label class="form-label" for="radio-nu"> Nữ </label>
+                            <input
+                                class="radio-btn"
+                                type="radio"
+                                name="gender"
+                                id="radio-nu"
+                                value="Nữ" />
+                        </div>
+                        <div class="flex-btn-item">
+                            <label class="form-label" for="radio-khac"> Khác </label>
+                            <input
+                                class="radio-btn"
+                                type="radio"
+                                name="gender"
+                                id="radio-khac"
+                                value="Khác" />
+                        </div>
+                    </div>
+                    <div class="form-group column">
+                        <div class="flex-item">
+                            <label class="form-label">Communication Preferences</label>
+                        </div>
+                        <div class="flex-item">
+                            <label class="form-label" for="email-1">
+                                Subscribe to Newsletter <br />
+                                (Nhận bản tin định kỳ)
+                            </label>
+                            <input
+                                id="email-1"
+                                class="checkbox"
+                                type="checkbox"
+                                value=""
+                                placeholder="" />
+                        </div>
+                        <div class="flex-item">
+                            <label class="form-label" for="email-2">
+                                Receive Promotional Emails <br />
+                                (Nhận thông tin khuyến mãi)
+                            </label>
+                            <input
+                                id="email-2"
+                                class="checkbox"
+                                type="checkbox"
+                                value=""
+                                placeholder="" />
+                        </div>
+                        <div class="flex-item">
+                            <label class="form-label" for="email-3">
+                                Get Product Updates <br />
+                                (Nhận cập nhật sản phẩm mới)
+                            </label>
+                            <input
+                                id="email-3"
+                                class="checkbox"
+                                type="checkbox"
+                                value=""
+                                placeholder="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input class="btn-submit" type="submit" value="Submit" />
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

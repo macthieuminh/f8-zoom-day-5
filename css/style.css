@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 62.5%;
+}
+/* Menu */
+.menu-wrapper {
+    display: flex;
+    padding: 0 30px;
+
+    color: #fff;
+    background: #3e5cca;
+
+    font-size: 1.6rem;
+}
+.menu-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    min-width: 100px;
+    box-shadow: 0px 5px 10px rgba(3e5cca, 40%);
+    border-radius: 8px;
+    border-bottom: 4px solid lighten(gray, 70%);
+    padding: 4px;
+    transition: all 0.3s;
+}
+.menu-item:hover {
+    color: #000;
+    background-color: #fff;
+    box-shadow: 0px 15px 25px -5px rgba(#3e5cca, 40%);
+    transform: scale(1.03);
+    padding-left: 16px;
+}
+
+.menu-item:first-child::before,
+.menu-item:last-child::after {
+    display: none;
+}
+.menu-item::after,
+.menu-item::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 40px;
+    background-color: #fff;
+}
+.menu-item::before {
+    left: 0;
+    top: 50%;
+    translate: 0 -50%;
+}
+.menu-item::after {
+    right: 0;
+    top: 50%;
+    translate: 0 -50%;
+}
+.menu-item:hover.menu-item::before {
+    display: block;
+    content: "\16ED";
+    translate: 20px -12px;
+    color: #3e5cca;
+}
+.menu-item-link {
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    font-size: 1.6rem;
+    padding: 12px 24px;
+}
+.menu-item-link:active {
+    box-shadow: 0px 4px 8px rgba(#3e5cca, 30%);
+    transform: scale(0.98);
+}
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+    .menu-item-link:hover {
+        background: linear-gradient(
+            90deg,
+            rgba(2, 0, 36, 1) 0%,
+            rgba(9, 9, 121, 1) 35%,
+            rgba(0, 212, 255, 1) 100%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+    }
+}
